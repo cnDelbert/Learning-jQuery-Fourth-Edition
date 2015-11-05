@@ -6,7 +6,7 @@
 // See README.txt for more information.
 
 $(document).ready(function(){
-	$('#switcher-large').onclick(function(){
+	$('#switcher-large').click(function(){
 		$('body').addClass('large');
 	});
 });
