@@ -4,3 +4,9 @@
 // page or follow along with the examples in the book.
 //
 // See README.txt for more information.
+
+$(document).ready(function(){
+	$('#switcher-large').onclick(function(){
+		$('body').addClass('large');
+	});
+});
