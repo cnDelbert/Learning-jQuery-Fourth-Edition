@@ -1,18 +1,16 @@
 $(document).ready(function(){
 	$('#switcher-large').click(function(){
-		$('body').removeClass('narrow');
-		$('body').addClass('large');
+		$('body').removeClass().addClass('large');
 	});
 
     $("#switcher-narrow").click(function(){
-        $("body").removeClass("large");
-        $("body").addClass("narrow");
+        $("body").removeClass().addClass("narrow");
     });
 
-    $("#switcher-default").addClass("selected")
+    $("#switcher-default")
+        .addClass("selected")
         .click(function(){
-        $("body").removeClass("large");
-        $("body").removeClass("narrow");
+        $("body").removeClass();
     });
 
     $("#switcher button").click(function(){
