@@ -1,20 +1,18 @@
 $(document).ready(function(){
-	$('#switcher-large').click(function(){
-		$('body').removeClass().addClass('large');
-	});
-
-    $("#switcher-narrow").click(function(){
-        $("body").removeClass().addClass("narrow");
-    });
-
-    $("#switcher-default")
-        .addClass("selected")
-        .click(function(){
-        $("body").removeClass();
-    });
-
     $("#switcher button").click(function(){
+        $("body").removeClass();    // The method removeClass should be first executed.
         $("#switcher button").removeClass("selected");
         $(this).addClass("selected");   // It is necessary for the brackets around 'this'.
     });
+
+	$('#switcher-large').click(function(){
+		$('body').addClass('large');
+	});
+
+    $("#switcher-narrow").click(function(){
+        $("body").addClass("narrow");
+    });
+
+    $("#switcher-default").addClass("selected");
+
 });
