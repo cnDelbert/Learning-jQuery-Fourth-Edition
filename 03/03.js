@@ -1,18 +1,9 @@
-$(document).ready(function(){
-    $("#switcher button").click(function(){
-        $("body").removeClass();    // The method removeClass should be first executed.
-        $("#switcher button").removeClass("selected");
-        $(this).addClass("selected");   // It is necessary for the brackets around 'this'.
+$(document).ready(function() {
+    $('#switcher-default').addClass('selected');
+    $('#switcher button').click(function() {
+        var bodyClass = this.id.split('-')[1];  // The id and css properties should be the same.
+        $('body').removeClass().addClass(bodyClass);
+        $('#switcher button').removeClass('selected');
+        $(this).addClass('selected');
     });
-
-	$('#switcher-large').click(function(){
-		$('body').addClass('large');
-	});
-
-    $("#switcher-narrow").click(function(){
-        $("body").addClass("narrow");
-    });
-
-    $("#switcher-default").addClass("selected");
-
 });
