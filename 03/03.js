@@ -6,4 +6,13 @@ $(document).ready(function() {
         $('#switcher button').removeClass('selected');
         $(this).addClass('selected');
     });
+
+    $('#switcher h3').click(function() {
+        $('#switcher button').toggleClass('hidden');
+    });
+    $("#switcher h3").hover(function(){
+        $(this).addClass("hover");
+    },function(){
+        $(this).removeClass("hover");
+    });
 });
