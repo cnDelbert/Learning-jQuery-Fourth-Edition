@@ -17,7 +17,9 @@ $(document).ready(function() {
     //    $(this).removeClass("hover");
     //});
 
-    $("#switcher").click(function(){
-        $("#switcher button").toggleClass("hidden");
+    $("#switcher").click(function(event){
+        if(event.target == this){
+            $("#switcher button").toggleClass("hidden");
+        }
     });
 });
