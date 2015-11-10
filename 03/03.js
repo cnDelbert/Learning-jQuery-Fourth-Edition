@@ -1,11 +1,13 @@
 $(document).ready(function() {
     $('#switcher-default').addClass('selected');
     $('#switcher button').click(function(event) {
-        var bodyClass = this.id.split('-')[1];  // The id and css properties should be the same.
-        $('body').removeClass().addClass(bodyClass);
-        $('#switcher button').removeClass('selected');
-        $(this).addClass('selected');
-        event.stopPropagation();
+        if(event.target.is("button")){
+            var bodyClass = this.id.split('-')[1];  // The id and css properties should be the same.
+            $('body').removeClass().addClass(bodyClass);
+            $('#switcher button').removeClass('selected');
+            $(event.target).addClass('selected');
+            event.stopPropagation();
+        }
     });
 
     $('#switcher h3').click(function() {
