@@ -7,11 +7,9 @@ $(document).ready(function() {
             $('#switcher button').removeClass('selected');
             $(event.target).addClass('selected');
             event.stopPropagation();
+        } else {
+            $('#switcher button').toggleClass('hidden');
         }
-    });
-
-    $('#switcher h3').click(function() {
-        $('#switcher button').toggleClass('hidden');
     });
 
     // list 3-10
