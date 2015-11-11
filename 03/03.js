@@ -6,7 +6,6 @@ $(document).ready(function() {
             $('body').removeClass().addClass(bodyClass);
             $('#switcher button').removeClass('selected');
             $(event.target).addClass('selected');
-            event.stopPropagation();
         } else {
             $('#switcher button').toggleClass('hidden');
         }
