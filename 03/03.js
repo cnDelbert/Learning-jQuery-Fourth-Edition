@@ -27,7 +27,7 @@ $(document).ready(function(){
         $("#switcher-" + className).addClass("selected");
         $("#switcher").off("click", toggleSwitcher);
         if(className == 'default'){
-            $("switcher").on("click", toggleSwitcher);
+            $("#switcher").on("click", toggleSwitcher);
         }
     };
 
