@@ -1,11 +1,17 @@
 $(document).ready(function(){
     var $speech = $("div.speech");
+    var defaultSize = $speech.css("fontSize");
     $("#switcher button").click(function(){
         var num = parseFloat($speech.css("fontSize"));
-        if(this.id == "switcher-large"){
-            num *= 1.4;
-        } else if (this.id == "switcher-small"){
-            num /= 1.4;
+        switch(this.id){
+            case "switcher-large":
+                num *= 1.4;
+                break;
+            case "switcher-small":
+                num /= 1.4;
+                break;
+            default:
+                num = parseFloat(defaultSize);
         }
         $speech.css("fontSize", num + "px");
     });
