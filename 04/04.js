@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("q").eq(1).hide();
+    $("p").eq(1).hide();
     var $speech = $("div.speech");
     var defaultSize = $speech.css("fontSize");
     $("#switcher button").click(function(){
@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
     $("a.more").click(function(event){
         event.preventDefault();     // This line to prevent the change of URL
-        $("q").eq(1).show();
+        $("p").eq(1).show(10000);
         $(this).hide();
     });
 });
