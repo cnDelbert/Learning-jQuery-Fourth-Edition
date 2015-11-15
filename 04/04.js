@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("q").eq(1).hide();
     var $speech = $("div.speech");
     var defaultSize = $speech.css("fontSize");
     $("#switcher button").click(function(){
