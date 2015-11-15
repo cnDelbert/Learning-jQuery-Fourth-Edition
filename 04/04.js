@@ -16,4 +16,9 @@ $(document).ready(function(){
         }
         $speech.css("fontSize", num + "px");
     });
+    $("a.more").click(function(event){
+        event.preventDefault();     // This line to prevent the change of URL
+        $("q").eq(1).show();
+        $(this).hide();
+    });
 });
