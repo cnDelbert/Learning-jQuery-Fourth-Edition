@@ -22,12 +22,11 @@ $(document).ready(function(){
 
     $("a.more").click(function(event){
         event.preventDefault();
-        if($firstPara.is(":hidden")){  // This one is much better
-        //if($firstPara.css("display") == "none"){
-            $firstPara.slideDown("slow");
+        $firstPara.slideToggle("slow");
+
+        if($(this).text() == "read more"){
             $(this).text("read less");
         }else{
-            $firstPara.slideUp("slow");
             $(this).text("read more");
         }
     });
