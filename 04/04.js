@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
     $("a.more").click(function(event){
         event.preventDefault();     // This line to prevent the change of URL
-        $("p").eq(1).fadeIn("slow");
+        $("p").eq(1).slideDown("slow");
         $(this).hide();
     });
 });
