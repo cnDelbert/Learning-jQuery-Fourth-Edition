@@ -1,7 +1,10 @@
 $(document).ready(function(){
-    $("p").eq(1).hide();
+    var $firstPara = $('p').eq(1);
     var $speech = $("div.speech");
     var defaultSize = $speech.css("fontSize");
+
+    $firstPara.hide();
+
     $("#switcher button").click(function(){
         var num = parseFloat($speech.css("fontSize"));
         switch(this.id){
@@ -16,9 +19,16 @@ $(document).ready(function(){
         }
         $speech.css("fontSize", num + "px");
     });
+
     $("a.more").click(function(event){
-        event.preventDefault();     // This line to prevent the change of URL
-        $("p").eq(1).slideDown("slow");
-        $(this).hide();
+        event.preventDefault();
+        if($firstPara.is(":hidden")){  // This one is much better
+        //if($firstPara.css("display") == "none"){
+            $firstPara.slideDown("slow");
+            $(this).text("read less");
+        }else{
+            $firstPara.slideUp("slow");
+            $(this).text("read more");
+        }
     });
 });
