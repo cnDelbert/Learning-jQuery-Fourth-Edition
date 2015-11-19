@@ -23,7 +23,10 @@ $(document).ready(function(){
     $("a.more").click(function(event){
         event.preventDefault();
         //$firstPara.slideToggle("slow");
-        $firstPara.animate({height: 'toggle'}, 'slow');
+        $firstPara.animate({
+            height: 'toggle',
+            opacity: "toggle"
+        }, 'slow');
 
         if($(this).text() == "read more"){
             $(this).text("read less");
