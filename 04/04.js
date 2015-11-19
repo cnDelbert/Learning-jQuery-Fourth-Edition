@@ -17,7 +17,7 @@ $(document).ready(function(){
             default:
                 num = parseFloat(defaultSize);
         }
-        $speech.css("fontSize", num + "px");
+        $speech.animate({fontSize: num + "px"}, "slow");
     });
 
     $("a.more").click(function(event){
