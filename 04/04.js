@@ -35,13 +35,16 @@ $(document).ready(function(){
         }
     });
 
-    $("div.label").click(function(){
+    $("div.label").click(function() {
         var paraWidth = $("div.speech p").outerWidth();
         var $switcher = $(this).parent();
         var switcherWidth = $switcher.outerWidth();
-        $switcher.css({position: "relative"})// can be also .css("position", "relative")
-            .animate({left: "paraWidth - switcherWidth"}, "slow")
-            .animate({height: "+=20px"}, "slow")
-            .animate({borderWidth: "5px"} ,"slow");
+        $switcher
+            .css({position: 'relative'})
+            .fadeTo('fast', 0.5)
+            .animate({left: paraWidth - switcherWidth}, 'slow')
+            .fadeTo('slow', 1.0)
+            .slideUp('fast')
+            .slideDown("slow")
     });
 });
