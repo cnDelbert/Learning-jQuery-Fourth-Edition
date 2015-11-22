@@ -51,4 +51,7 @@ $(document).ready(function(){
             })
             .slideDown("slow")
     });
+
+    $('p').eq(2).css('border', '1px solid #333');
+    $('p').eq(3).css('backgroundColor', '#ccc').hide();
 });
