@@ -45,6 +45,7 @@ $(document).ready(function(){
             .animate({left: paraWidth - switcherWidth}, {duration: 'slow', queue: false})
             .fadeTo('slow', 1.0)
             .slideUp('fast')
+            .css({backgroundColor: '#f00'})
             .slideDown("slow")
     });
 });
