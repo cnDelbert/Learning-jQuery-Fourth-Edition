@@ -42,7 +42,7 @@ $(document).ready(function(){
         $switcher
             .css({position: 'relative'})
             .fadeTo('fast', 0.5)
-            .animate({left: paraWidth - switcherWidth}, 'slow')
+            .animate({left: paraWidth - switcherWidth}, {duration: 'slow', queue: false})
             .fadeTo('slow', 1.0)
             .slideUp('fast')
             .slideDown("slow")
