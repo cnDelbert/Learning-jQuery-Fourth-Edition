@@ -6,5 +6,8 @@
 // See README.txt for more information.
 
 $(document).ready(function(){
-    $("div.chapter a").attr({rel: "external"});
+    $("div.chapter a").attr({
+        rel: "external",
+        title: "Learn more at Wikipedia"
+    });
 });
