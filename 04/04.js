@@ -44,10 +44,8 @@ $(document).ready(function(){
             .fadeTo('fast', 0.5)
             .animate({left: paraWidth - switcherWidth}, {duration: 'slow', queue: false})
             .fadeTo('slow', 1.0)
-            .slideUp('fast')
-            .queue(function(next){
+            .slideUp('fast',function(){
                 $switcher.css({backgroundColor: '#f00'});
-                next();
             })
             .slideDown("slow")
     });
