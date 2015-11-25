@@ -6,10 +6,12 @@
 // See README.txt for more information.
 
 $(document).ready(function(){
-    $("div.chapter a[href^='wikipedia']").attr({
+    $("div.chapter a[href*='wikipedia']").attr({
         rel: "external",
-        title: "Learn more at Wikipedia",
-        id: function(index, oldValue){
+        title: function() {
+            return "Learn more about " + $(this).text() + " at Wikipedia";
+        },
+                id: function(index, oldValue){
             return "wikilink-" + index;
         }
     });
