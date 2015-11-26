@@ -11,8 +11,11 @@ $(document).ready(function(){
         title: function() {
             return "Learn more about " + $(this).text() + " at Wikipedia";
         },
-                id: function(index, oldValue){
+        id: function(index, oldValue){
             return "wikilink-" + index;
         }
     });
+
+    $("<a href='#top'>Back to top</a>").insertAfter("div.chapter p");
+    $("<a id='top'></a>")
 });
