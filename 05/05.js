@@ -21,6 +21,7 @@ $(document).ready(function(){
 
     var $notes = $('<ol id="notes"></ol>').insertBefore('#footer');
     $('span.footnote').each(function(index) {
+        $('<sup>' + (index + 1) + '</sup>').insertBefore(this);
         $(this).appendTo($notes).wrap('<li></li>');
     });
 });
