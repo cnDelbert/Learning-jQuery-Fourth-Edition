@@ -22,4 +22,5 @@ $(document).ready(function(){
         var $parentParagraph = $(this).parent('p');
         $parentParagraph.css('position', 'relative');
     });
+    
 });
