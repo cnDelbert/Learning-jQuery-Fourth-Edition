@@ -10,9 +10,11 @@ $(document).ready(function(){
     });
 
     $("<a href='#top'>Back to top</a>").insertAfter("div.chapter p");
+
     $("<a id='top'></a>").prependTo("body");
 
     var $notes = $('<ol id="notes"></ol>').insertBefore('#footer');
+    
     $('span.footnote').each(function(index) {
         $(this).before(['<sup>', index + 1, '</sup>'].join(" "))
             .appendTo($notes).wrap('<li></li>');
@@ -22,5 +24,5 @@ $(document).ready(function(){
         var $parentParagraph = $(this).parent('p');
         $parentParagraph.css('position', 'relative');
     });
-    
+
 });
