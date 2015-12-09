@@ -26,6 +26,7 @@ $(document).ready(function(){
     });
 
     var $clonedCopy = $(this).clone();
-    $clonedCopy.prependTo($parentParagraph);
+    $clonedCopy.addClass('pulled')
+        .prependTo($parentParagraph);
 
 });
