@@ -26,6 +26,9 @@ $(document).ready(function(){
 
         var $clonedCopy = $(this).clone();
         $clonedCopy.addClass('pulled')
+            .find('span.drop')
+            .html('&hellip;')
+            .end()
             .prependTo($parentParagraph);
     });
 
