@@ -29,6 +29,7 @@ $(document).ready(function(){
             .find('span.drop')
             .html('&hellip;')
             .end()
+            .text($clonedCopy.text())
             .prependTo($parentParagraph);
     });
 
