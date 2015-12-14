@@ -14,4 +14,6 @@ $(document).ready(function(){
     $("<a id='top'></a>").prependTo("body");
 
     $("span.footnote").insertBefore("#footer")
+        .wrapAll("<ol id='notes'></ol>")
+        .wrap("<li></li>");
 });
