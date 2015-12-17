@@ -19,8 +19,14 @@ $(document).ready(function(){
 
     var $notes = $('<ol id="notes"></ol>').insertBefore("#footer"); // insertBefore and insertAfter perform the same.
     $("span.footnote").each(function(index){
-        $(this).before("<sup>" + (index + 1) + "</sup>")
-            .appendTo($notes).wrap("<li></li>");
+        $(this).before((["<a href='#footnoot-",
+            index + 1,
+            "' id='context-",
+            index + 1,
+            "' class='context'><sup>",
+            index + 1,
+            "</sup></a>"]).join(''))
+            .appendTo($notes).wrap("<li id='footnoot-" + (index + 1) + "'></li>");
     });
 
 });
