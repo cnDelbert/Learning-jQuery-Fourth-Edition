@@ -26,7 +26,13 @@ $(document).ready(function(){
             "' class='context'><sup>",
             index + 1,
             "</sup></a>"]).join(''))
-            .appendTo($notes).wrap("<li id='footnoot-" + (index + 1) + "'></li>");
+            .appendTo($notes)
+            .append([
+                '&nbsp;(<a href="#context-',
+                index + 1,
+                '">context</a>)'
+            ].join(''))
+            .wrap("<li id='footnoot-" + (index + 1) + "'></li>");
     });
 
 });
