@@ -34,5 +34,4 @@ $(document).ready(function(){
             ].join(''))
             .wrap("<li id='footnoot-" + (index + 1) + "'></li>");
     });
-
 });
