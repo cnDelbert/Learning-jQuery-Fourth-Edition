@@ -37,6 +37,8 @@ $(document).ready(function(){
 
     $('span.pull-quote').each(function(index) {
         var $parentParagraph = $(this).parent('p');
+        var $clonedCopy      = $(this).clone();
         $parentParagraph.css('position', 'relative');
+        $clonedCopy.addClass("pulled").appendTo($parentParagraph);  // Same performance with prependTo
     });
 });
