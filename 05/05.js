@@ -39,6 +39,10 @@ $(document).ready(function(){
         var $parentParagraph = $(this).parent('p');
         var $clonedCopy      = $(this).clone();
         $parentParagraph.css('position', 'relative');
-        $clonedCopy.addClass("pulled").appendTo($parentParagraph);  // Same performance with prependTo
+        $clonedCopy.addClass("pulled")
+            .find("span.drop")
+            .html("…")  // may … works well
+            .end()      // why end()?
+            .appendTo($parentParagraph);  // Same performance with prependTo
     });
 });
