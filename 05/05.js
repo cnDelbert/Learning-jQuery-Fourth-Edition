@@ -45,5 +45,5 @@ $(document).ready(function(){
             .end()      // why end()? end() 方法结束当前链条中的最近的筛选操作，并将匹配元素集还原为之前的状态。
             .text($clonedCopy.text())
             .appendTo($parentParagraph);  // Same performance with prependTo
-    });
+    });// Finish of Chapter 5
 });
