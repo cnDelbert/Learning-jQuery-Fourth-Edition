@@ -10,10 +10,12 @@ $(document).ready(function() {
         $("#dictionary").load("a.html");
         alert("loaded");
     });
-    
+
     $('#letter-b a').click(function(event){
         event.preventDefault();
-        $.getJSON("b.json");
+        $.getJSON("b.json", function(data){
+            
+        });
         //$('#dictionary');
     })
 });
