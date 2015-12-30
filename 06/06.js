@@ -13,7 +13,9 @@ $(document).ready(function() {
 
     $('#letter-b a').click(function(event){
         event.preventDefault();
-        $.getScript('c.js');
+        //$.getScript('c.js');
+        $.get('d.xml', function(data) {
+        });
         //$('#dictionary');
     });
 });
