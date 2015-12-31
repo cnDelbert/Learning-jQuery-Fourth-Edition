@@ -15,6 +15,7 @@ $(document).ready(function() {
         event.preventDefault();
         //$.getScript('c.js');
         $.get('d.xml', function(data) {
+            
         });
         //$('#dictionary');
     });
