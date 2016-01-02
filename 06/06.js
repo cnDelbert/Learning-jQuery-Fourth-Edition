@@ -42,6 +42,5 @@ $(document).ready(function() {
                 html += '</div>';
                 $('#dictionary').append($(html));
         });
-        //$('#dictionary');
     });
 });
