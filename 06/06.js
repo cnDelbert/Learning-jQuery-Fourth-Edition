@@ -11,12 +11,12 @@ $(document).ready(function() {
         alert("loaded");
     });
 
-    $('#letter-b a').click(function(event){
+    $('#letter-b a').click(function(event) {
         event.preventDefault();
         //$.getScript('c.js');
-        $.get('d.xml', function(data) {
+        $.get('d.xml', function (data) {
             $('#dictionary').empty();
-            $(data).find('entry').each(function() { 4
+            $(data).find('entry').each(function () {
                 var $entry = $(this);
                 var html = '<div class="entry">';
                 html += '<h3 class="term">' + $entry.attr('term');
@@ -28,7 +28,7 @@ $(document).ready(function() {
                 var $quote = $entry.find('quote');
                 if ($quote.length) {
                     html += '<div class="quote">';
-                    $quote.find('line').each(function() {
+                    $quote.find('line').each(function () {
                         html += '<div class="quote-line">';
                         html += $(this).text() + '</div>';
                     });
@@ -41,6 +41,7 @@ $(document).ready(function() {
                 html += '</div>';
                 html += '</div>';
                 $('#dictionary').append($(html));
+            });
         });
     });
 });
