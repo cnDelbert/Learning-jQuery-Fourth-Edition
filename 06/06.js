@@ -25,6 +25,7 @@ $(document).ready(function() {
                 html += '</div>';
                 html += '<div class="definition">';
                 html += $entry.find('definition').text();
+                
                 var $quote = $entry.find('quote');
                 if ($quote.length) {
                     html += '<div class="quote">';
@@ -32,7 +33,7 @@ $(document).ready(function() {
                         html += '<div class="quote-line">';
                         html += $(this).text() + '</div>';
                     });
-                    
+
                     if ($quote.attr('author')) {
                         html += '<div class="quote-author">';
                         html += $quote.attr('author') + '</div>';
