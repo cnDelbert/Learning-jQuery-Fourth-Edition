@@ -16,7 +16,7 @@ $(document).ready(function() {
         //$.getScript('c.js');
         $.get('d.xml', function (data) {
             $('#dictionary').empty();
-            
+
             $(data).find('entry').each(function () {
                 var $entry = $(this);
                 var html = '<div class="entry">';
@@ -28,6 +28,7 @@ $(document).ready(function() {
                 html += $entry.find('definition').text();
 
                 var $quote = $entry.find('quote');
+                
                 if ($quote.length) {
                     html += '<div class="quote">';
                     $quote.find('line').each(function () {
