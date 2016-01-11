@@ -16,7 +16,6 @@ $(document).ready(function() {
         //$.getScript('c.js');
         $.get('d.xml', function (data) {
             $('#dictionary').empty();
-
             $(data).find('entry').each(function () {
                 var $entry = $(this);
                 var html = '<div class="entry">';
