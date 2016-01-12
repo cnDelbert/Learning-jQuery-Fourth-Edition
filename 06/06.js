@@ -40,6 +40,7 @@ $(document).ready(function() {
                     }
                     html += '</div>';
                 }
+                
                 html += '</div>';
                 html += '</div>';
                 $('#dictionary').append($(html));
