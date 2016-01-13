@@ -40,7 +40,7 @@ $(document).ready(function() {
                     }
                     html += '</div>';
                 }
-                
+                // 不想动
                 html += '</div>';
                 html += '</div>';
                 $('#dictionary').append($(html));
