@@ -40,7 +40,7 @@ $(document).ready(function() {
                     }
                     html += '</div>';
                 }
-                // 不想动 啊啊啊 BeautifulSoup4    
+                // 不想动 啊啊啊 BeautifulSoup4      
                 html += '</div>';
                 html += '</div>';
                 $('#dictionary').append($(html));
