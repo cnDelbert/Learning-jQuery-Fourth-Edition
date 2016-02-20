@@ -32,7 +32,7 @@ $(document).ready(function() {
                     $quote.find('line').each(function () {
                         html += '<div class="quote-line">';
                         html += $(this).text() + '</div>';
-                    });    
+                    });      
 
                     if ($quote.attr('author')) {
                         html += '<div class="quote-author">';
