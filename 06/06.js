@@ -26,7 +26,7 @@ $(document).ready(function() {
                 html += '<div class="definition">';
                 html += $entry.find('definition').text();
                 var $quote = $entry.find('quote');
-      
+        
                 if ($quote.length) {
                     html += '<div class="quote">';
                     $quote.find('line').each(function () {
