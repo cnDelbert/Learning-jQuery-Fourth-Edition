@@ -39,7 +39,7 @@ $(document).ready(function() {
                     }
                     html += '</div>';
                 }
-                // 不想动 啊啊啊 BeautifulSoup4       think PHP
+                // 不想动 啊啊啊 BeautifulSoup4       think
                 html += '</div>';
                 html += '</div>';
                 $('#dictionary').append($(html));
